@@ -225,6 +225,7 @@ bool playBlackJack(array<Card, 52> &cardDeck)
       if (playersScore > 21)
       {
         cout << "You've bust!\n";
+        cout << "You've Lost\n";
         return false;;
         break;
       }
@@ -249,6 +250,7 @@ bool playBlackJack(array<Card, 52> &cardDeck)
     if (dealersScore > 21)
     {
       cout << "Dealer busts!\n";
+      cout << "You've Won!\n";
       return true;
     }
   }
@@ -287,7 +289,7 @@ int main()
   int rankIndex = 0;
   for (int i = 0; i < 52; ++i)
   {
-    if ( i % 13 == 0)
+    if ( i % 13 == 0 )
     {
       ++suitIndex;
       rankIndex = 0;
