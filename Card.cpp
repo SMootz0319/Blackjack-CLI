@@ -6,7 +6,6 @@ void Card::printCard() const
 {
   char cardCode[2]; // the code for this card
       
-  // get card rank
   switch (m_rank)
   {
     case RANK_2: cardCode[0] = '2'; break;
@@ -25,7 +24,6 @@ void Card::printCard() const
     default:     cardCode[0] = 'X'; break;
   }
   
-  // get card suit
   switch(m_suit)
   {
     case SUIT_CLUBS:    cardCode[1] = 'C'; break;
