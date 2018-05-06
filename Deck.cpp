@@ -52,5 +52,10 @@ void Deck::shuffle()
   m_cardIndex = 0;
 }
 
+const Card& Deck::dealCard()
+{
+  assert(m_cardIndex < 52 && "Deck is out of Cards!");
 
+  return m_deck[m_cardIndex++];
+}
 
