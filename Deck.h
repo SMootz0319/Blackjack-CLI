@@ -32,11 +32,6 @@ class Deck
     
     void shuffle();
     
-    const Card& dealCard()
-    {
-      assert(m_cardIndex < 52 && "Deck is out of Cards!");
-  
-      return m_deck[m_cardIndex++];
-    }
+    const Card& dealCard();
 };
 #endif
