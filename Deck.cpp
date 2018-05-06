@@ -3,7 +3,6 @@
 #include "RandomNumber.h"
 #include "Card.h"
 
- 
 Deck::Deck()
 {
   int suitIndex = 0;
@@ -14,10 +13,8 @@ Deck::Deck()
     {
       ++suitIndex;
       rankIndex = 0;
-    }
-    
-    m_deck[i] = {static_cast<Card::Rank>(rankIndex), static_cast<Card::Suit>(suitIndex - 1)};
-    
+    }   
+    m_deck[i] = {static_cast<Card::Rank>(rankIndex), static_cast<Card::Suit>(suitIndex - 1)};    
     ++rankIndex;
   }
 }
@@ -38,7 +35,6 @@ void Deck::printDeck() const
       spaceCounter = 0;
     }
   }
-  
   cout << '\n';
 }
 
@@ -47,15 +43,13 @@ void Deck::shuffle()
   for (int i = 0; i < 52; ++i)
   {
     swapCard(m_deck[i], m_deck[getRandomNumber(0,51)]);
-  }
-  
+  }  
   m_cardIndex = 0;
 }
 
 const Card& Deck::dealCard()
 {
   assert(m_cardIndex < 52 && "Deck is out of Cards!");
-
   return m_deck[m_cardIndex++];
 }
 
