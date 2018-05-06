@@ -7,9 +7,7 @@
 using namespace std;
 
 bool playBlackJack(Deck deck)
-{
-  //Card *cardPointer = &cardDeck[0];
-  
+{  
   // deal dealer's first card
   int dealersScore = deck.dealCard().getCardValue();
   cout << "Dealers card value: " << dealersScore << '\n' << '\n';
@@ -78,7 +76,6 @@ bool playBlackJack(Deck deck)
   }
   
   cout << "Dealer stands.\n";
-  
   cout << "Player Score:\t" << playersScore << '\n';
   cout << "Dealer's Score:\t" << dealersScore << '\n';
   
@@ -100,26 +97,8 @@ bool playBlackJack(Deck deck)
     
 }
 
-
 int main()
 {
-  /*
-  const Card cardQueenHearts(Card::RANK_Q, Card::SUIT_HEARTS);
-  cardQueenHearts.printCard();
-  
-  cout << " has the value " << cardQueenHearts.getCardValue() << '\n';
-
-
-  
-
-  //deck.printDeck();
-  deck.shuffle();
-  deck.printDeck();
-  
-  cout << "The first card has value: " << deck.dealCard().getCardValue() << '\n';
-  cout << "The second card has value: " << deck.dealCard().getCardValue() << '\n';
-  */
-
   srand(static_cast<unsigned int>(time(0)));
   Deck deck;
   
@@ -133,45 +112,9 @@ int main()
 
     // play game
     bool gameResult = playBlackJack(deck);
-    
-
     cout << "\nWould you like to play again? (y/n)";
     cin >> playAgain;
   }
   
   return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
